@@ -1,0 +1,30 @@
+<div padding>
+  <ion-row>
+    <ion-col>
+      <img class="logo" src="../../assets/ticket.png" />
+    </ion-col>
+  </ion-row>
+  <form [formGroup]=form>
+    <ion-row>
+      <ion-col>
+        <ion-list inset class="no-border">
+          <ion-item>
+            <ion-label>Username</ion-label>
+            <ion-input type="text" formControlName="email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>No of seats</ion-label>
+            <ion-input type="number" formControlName="tickets"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button color="primary" [disabled]="form.invalid" (click)="goToBookTicket()">Book Tickets</ion-button>
+      </ion-col>
+    </ion-row>
+
+  </form>
+
+</div>

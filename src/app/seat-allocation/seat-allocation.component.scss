@@ -1,0 +1,53 @@
+.screenLabel{
+    background-color: #5549ff;
+    width: 98vw;
+    text-align: center;
+}
+
+
+.screenRow{
+    display:block;
+    width: 98vw;
+}
+
+.rowNumber{
+    display: inline-block;
+    width: 20px;
+    margin-right: 1%;
+    text-align: center;
+}
+
+.seat{
+    display: inline-block;
+    width: 20px;
+    margin-left:10px;margin-right:10px
+}
+
+
+
+
+.inprogress ion-checkbox{
+    background: #5549ff;
+
+     border-color : #5549ff !important;
+
+     --checkmark-color:#5549ff;
+     --background-checked: #5549ff;
+     --border-color: rgb(129, 128, 128);
+     --border-color-checked : rgb(129, 128, 128);
+}
+
+.booked ion-checkbox{
+    background: #ff4970;
+
+     border-color : #ff4970 !important;
+
+     --checkmark-color:#ff4970;
+     --background-checked: #ff4970;
+     --border-color: rgb(129, 128, 128);
+     --border-color-checked : rgb(129, 128, 128);
+}
+
+
+
+

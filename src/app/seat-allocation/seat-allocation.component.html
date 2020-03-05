@@ -1,0 +1,37 @@
+<ion-grid>
+  <ion-row>
+    <ion-label class='screenLabel' color="light">SCREEN</ion-label>
+  </ion-row>
+  <form #f="ngForm" (ngSubmit)="submit(f)">
+    <ion-row nowrap class='screenRow'>
+      <div>
+        <span class="rowNumber"></span>
+        <ng-container *ngFor="let coloumn of columns;">
+          <span class="seat">
+            {{coloumn}}
+          </span>
+
+        </ng-container>
+
+      </div>
+      <div *ngFor="let row of rows;let i = index">
+        <span class="rowNumber">{{getRowNumber(row)}}</span>
+        <ng-container *ngFor="let seat of row; let j = index">
+
+          <span class="seat" [ngClass]="{'booked':seat.booked == 2,'inprogress':seat.booked == 1}">
+            <ion-checkbox [(ngModel)]="seat.booked" (ionChange)="checkUncheckSeat(seat)" [name]="seat.seatNumber"
+              [attr.disabled]="seat.booked == 2"></ion-checkbox>
+          </span>
+
+        </ng-container>
+
+      </div>
+
+      <button (click)="submit(f)"></button>
+      <ion-button color="primary" (click)="bookSeats()">Book Seats</ion-button>
+      <ion-button color="primary" (click)="viewBookedSeats()">View All Booked</ion-button>
+
+
+    </ion-row>
+  </form>
+</ion-grid>

@@ -1,0 +1,25 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Booking Summary</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-list>
+      <!-- <ion-list-header>
+        Recent Conversations
+      </ion-list-header> -->
+
+      <ion-item *ngFor="let booking of bookingDetails">
+        <ion-avatar slot="start">
+          <img src="../../assets/user.jpg">
+        </ion-avatar>
+        <ion-label>
+          <h2>Email: {{booking.userName}}</h2>
+          <h3>No of tickets: {{booking.quantity}}</h3>
+          <p>Seat Number: {{booking.seatNumber}}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+  </ion-card-content>
+</ion-card>
